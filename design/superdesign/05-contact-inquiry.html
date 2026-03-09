@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - IHMN</title>
+    <meta name="view-transition" content="same-origin">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+    
+    <!-- Prefetch Links -->
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/4f6f94bf-e829-4f84-83b6-3cbe792c1725" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/dc07bc86-bc0c-49f1-b124-4e92bc8cf440" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/ed77298b-23c1-4f37-a050-5aea5a98b8fe" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/ac70ea43-ae67-46d3-846d-d84eedbdec88" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/f14962ec-3806-411f-a48a-957cc898721d" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/673599c3-1e55-4d73-8161-b4bcf8999c38" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/b83701fb-5761-476f-9701-e9a1c7fc91fa" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/452b2e6c-4b89-4bab-998c-0b0436ac6a5a" as="document">
+
+    <style>
+        :root {
+            --font-display: 'General Sans', sans-serif;
+            --font-body: 'Satoshi', sans-serif;
+            --color-bg: #FFFFFF;
+            --color-text: #1A2332;
+            --color-text-light: #475569;
+            --color-accent: #4A7BA7;
+            --color-accent-dark: #365D80;
+            --color-surface: #F8FAFC;
+            --color-border: #E2E8F0;
+        }
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4, h5, h6, .font-display {
+            font-family: var(--font-display);
+        }
+
+        /* View Transitions */
+        html {
+            background-color: var(--color-bg);
+        }
+        @view-transition {
+            navigation: auto;
+        }
+        ::view-transition {
+            background-color: var(--color-bg);
+        }
+
+        /* Persistent Elements - No Animation */
+        ::view-transition-old(site-header),
+        ::view-transition-new(site-header),
+        ::view-transition-old(site-footer),
+        ::view-transition-new(site-footer) {
+            animation: none;
+            mix-blend-mode: normal;
+        }
+
+        /* Dynamic Content - Crossfade */
+        ::view-transition-old(main-content) {
+            animation: 0.25s ease-out both fade-out;
+        }
+        ::view-transition-new(main-content) {
+            animation: 0.25s ease-in 0.1s both fade-in;
+        }
+
+        @keyframes fade-out {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        ::view-transition-old(root),
+        ::view-transition-new(root) {
+            animation: none;
+            mix-blend-mode: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen flex flex-col">
+        <!-- Navigation (Persistent) -->
+        <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#E2E8F0]" style="view-transition-name: site-header">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <!-- Logo Area -->
+                <a href="https://p.superdesign.dev/draft/4f6f94bf-e829-4f84-83b6-3cbe792c1725" id="nav-logo" class="flex flex-col group">
+                    <span class="font-display font-bold text-2xl text-[#1A2332] tracking-tight">IHMN</span>
+                    <span class="text-[10px] uppercase tracking-widest text-[#4A7BA7] font-medium">Depuis 1980</span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="https://p.superdesign.dev/draft/4f6f94bf-e829-4f84-83b6-3cbe792c1725" id="nav-home" class="text-sm font-medium text-[#1A2332] hover:text-[#4A7BA7] transition-colors">Accueil</a>
+                    <a href="https://p.superdesign.dev/draft/dc07bc86-bc0c-49f1-b124-4e92bc8cf440" id="nav-formations" class="text-sm font-medium text-[#1A2332] hover:text-[#4A7BA7] transition-colors">Formations</a>
+                    <a href="https://p.superdesign.dev/draft/f14962ec-3806-411f-a48a-957cc898721d" id="nav-about" class="text-sm font-medium text-[#1A2332] hover:text-[#4A7BA7] transition-colors">À propos</a>
+                    <a href="https://p.superdesign.dev/draft/673599c3-1e55-4d73-8161-b4bcf8999c38" id="nav-team" class="text-sm font-medium text-[#1A2332] hover:text-[#4A7BA7] transition-colors">Équipe</a>
+                    <a href="https://p.superdesign.dev/draft/b83701fb-5761-476f-9701-e9a1c7fc91fa" id="nav-practical" class="text-sm font-medium text-[#1A2332] hover:text-[#4A7BA7] transition-colors">Infos pratiques</a>
+                    <a href="https://p.superdesign.dev/draft/fdbfab77-47a4-4f51-a3dc-520a3d76fb0e" id="nav-contact" aria-current="page" class="px-6 py-2.5 bg-[#1A2332] text-white text-sm font-medium hover:bg-[#4A7BA7] transition-colors duration-300 rounded-sm shadow-sm ring-2 ring-[#1A2332]/10 ring-offset-1">Contactez-nous</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-[#1A2332]">
+                    <iconify-icon icon="lucide:menu" width="24"></iconify-icon>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content (Dynamic) -->
+        <main class="flex-grow" style="view-transition-name: main-content">
+            
+            <!-- Page Header -->
+            <section class="bg-[#F8FAFC] py-16 md:py-24 border-b border-[#E2E8F0]">
+                <div class="max-w-7xl mx-auto px-6 text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold text-[#1A2332] mb-6">Contact & Accès</h1>
+                    <p class="text-lg text-[#475569] max-w-2xl mx-auto leading-relaxed">
+                        Notre équipe administrative est à votre écoute pour répondre à vos questions sur nos formations et vous accompagner dans votre projet professionnel.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Contact Content Grid -->
+            <section class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="grid lg:grid-cols-12 gap-12 lg:gap-24">
+                        
+                        <!-- Left Column: Information -->
+                        <div class="lg:col-span-5 space-y-12">
+                            <!-- Contact Info Block -->
+                            <div class="space-y-8">
+                                <h2 class="text-2xl font-bold text-[#1A2332] flex items-center gap-3">
+                                    <span class="w-8 h-1 bg-[#4A7BA7]"></span>
+                                    Coordonnées
+                                </h2>
+                                
+                                <div class="space-y-6">
+                                    <div class="flex gap-5">
+                                        <div class="w-10 h-10 rounded-full bg-[#F1F5F9] flex items-center justify-center flex-shrink-0 text-[#4A7BA7]">
+                                            <iconify-icon icon="lucide:map-pin" width="20"></iconify-icon>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold text-[#1A2332] mb-1">Adresse</h3>
+                                            <p class="text-[#475569] leading-relaxed">
+                                                Chaussée de Namur 123<br>
+                                                5000 Namur, Belgique
+                                            </p>
+                                            <p class="text-sm text-[#94A3B8] mt-2 italic">Parking gratuit disponible</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex gap-5">
+                                        <div class="w-10 h-10 rounded-full bg-[#F1F5F9] flex items-center justify-center flex-shrink-0 text-[#4A7BA7]">
+                                            <iconify-icon icon="lucide:phone" width="20"></iconify-icon>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold text-[#1A2332] mb-1">Téléphone</h3>
+                                            <p class="text-[#475569]">
+                                                <a href="tel:+3281223344" class="hover:text-[#4A7BA7] transition-colors">+32 (0)81 22 33 44</a>
+                                            </p>
+                                            <p class="text-sm text-[#94A3B8] mt-2">Du lundi au vendredi, 9h-17h</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex gap-5">
+                                        <div class="w-10 h-10 rounded-full bg-[#F1F5F9] flex items-center justify-center flex-shrink-0 text-[#4A7BA7]">
+                                            <iconify-icon icon="lucide:mail" width="20"></iconify-icon>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold text-[#1A2332] mb-1">Email</h3>
+                                            <p class="text-[#475569]">
+                                                <a href="mailto:secretariat@ihmn.be" class="hover:text-[#4A7BA7] transition-colors">secretariat@ihmn.be</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="h-px bg-[#E2E8F0] w-full"></div>
+
+                            <!-- Transport / Access Block -->
+                            <div class="space-y-6">
+                                <h2 class="text-xl font-bold text-[#1A2332]">Accès & Transports</h2>
+                                <ul class="space-y-4 text-[#475569]">
+                                    <li class="flex gap-3">
+                                        <iconify-icon icon="lucide:train" class="text-[#4A7BA7] mt-1"></iconify-icon>
+                                        <span><strong class="text-[#1A2332]">Gare de Namur</strong> : à 15 min en bus (Lignes 12, 80)</span>
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <iconify-icon icon="lucide:car" class="text-[#4A7BA7] mt-1"></iconify-icon>
+                                        <span><strong class="text-[#1A2332]">E411 Sortie 14</strong> : à 5 min en voiture</span>
+                                    </li>
+                                </ul>
+                                <!-- Static Map Placeholder styled minimally -->
+                                <div class="w-full aspect-video bg-[#E2E8F0] rounded-sm relative overflow-hidden group">
+                                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                                         alt="Carte d'accès" 
+                                         class="w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 transition-all duration-500">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <a href="https://goo.gl/maps/placeholder" target="_blank" class="px-4 py-2 bg-white/90 backdrop-blur text-[#1A2332] text-sm font-medium rounded-sm shadow-sm hover:bg-[#4A7BA7] hover:text-white transition-colors">
+                                            Ouvrir dans Google Maps
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Form -->
+                        <div class="lg:col-span-7">
+                            <div class="bg-[#F8FAFC] border border-[#E2E8F0] p-8 md:p-10 rounded-sm">
+                                <h2 class="text-2xl font-bold text-[#1A2332] mb-2">Envoyez-nous un message</h2>
+                                <p class="text-[#475569] mb-8 text-sm">Tous les champs marqués d'un astérisque (*) sont obligatoires.</p>
+                                
+                                <form class="space-y-6">
+                                    <div class="grid md:grid-cols-2 gap-6">
+                                        <div class="space-y-2">
+                                            <label for="firstname" class="text-sm font-medium text-[#1A2332]">Prénom *</label>
+                                            <input type="text" id="firstname" class="w-full px-4 py-3 bg-white border border-[#E2E8F0] rounded-sm focus:outline-none focus:border-[#4A7BA7] focus:ring-1 focus:ring-[#4A7BA7] transition-all" placeholder="Votre prénom">
+                                        </div>
+                                        <div class="space-y-2">
+                                            <label for="lastname" class="text-sm font-medium text-[#1A2332]">Nom *</label>
+                                            <input type="text" id="lastname" class="w-full px-4 py-3 bg-white border border-[#E2E8F0] rounded-sm focus:outline-none focus:border-[#4A7BA7] focus:ring-1 focus:ring-[#4A7BA7] transition-all" placeholder="Votre nom">
+                                        </div>
+                                    </div>
+
+                                    <div class="grid md:grid-cols-2 gap-6">
+                                        <div class="space-y-2">
+                                            <label for="email" class="text-sm font-medium text-[#1A2332]">Email *</label>
+                                            <input type="email" id="email" class="w-full px-4 py-3 bg-white border border-[#E2E8F0] rounded-sm focus:outline-none focus:border-[#4A7BA7] focus:ring-1 focus:ring-[#4A7BA7] transition-all" placeholder="exemple@email.com">
+                                        </div>
+                                        <div class="space-y-2">
+                                            <label for="phone" class="text-sm font-medium text-[#1A2332]">Téléphone</label>
+                                            <input type="tel" id="phone" class="w-full px-4 py-3 bg-white border border-[#E2E8F0] rounded-sm focus:outline-none focus:border-[#4A7BA7] focus:ring-1 focus:ring-[#4A7BA7] transition-all" placeholder="0470 12 34 56">
+                                        </div>
+                                    </div>
+
+                                    <div class="space-y-2">
+                                        <label for="subject" class="text-sm font-medium text-[#1A2332]">Sujet de la demande *</label>
+                                        <div class="relative">
+                                            <select id="subject" class="w-full px-4 py-3 bg-white border border-[#E2E8F0] rounded-sm focus:outline-none focus:border-[#4A7BA7] focus:ring-1 focus:ring-[#4A7BA7] transition-all appearance-none cursor-pointer">
+                                                <option value="" disabled selected>Sélectionnez un sujet</option>
+                                                <option value="admissions">Renseignements sur les inscriptions</option>
+                                                <option value="formations">Questions sur le programme</option>
+                                                <option value="rdv">Demande de rendez-vous</option>
+                                                <option value="autre">Autre demande</option>
+                                            </select>
+                                            <iconify-icon icon="lucide:chevron-down" class="absolute right-4 top-1/2 -translate-y-1/2 text-[#64748B] pointer-events-none"></iconify-icon>
+                                        </div>
+                                    </div>
+
+                                    <div class="space-y-2">
+                                        <label for="message" class="text-sm font-medium text-[#1A2332]">Message *</label>
+                                        <textarea id="message" rows="5" class="w-full px-4 py-3 bg-white border border-[#E2E8F0] rounded-sm focus:outline-none focus:border-[#4A7BA7] focus:ring-1 focus:ring-[#4A7BA7] transition-all resize-none" placeholder="Comment pouvons-nous vous aider ?"></textarea>
+                                    </div>
+
+                                    <div class="flex items-start gap-3 pt-2">
+                                        <input type="checkbox" id="consent" class="mt-1 w-4 h-4 text-[#4A7BA7] border-[#E2E8F0] rounded-sm focus:ring-[#4A7BA7]">
+                                        <label for="consent" class="text-xs text-[#64748B] leading-relaxed">
+                                            En soumettant ce formulaire, j'accepte que mes données soient traitées par l'IHMN pour répondre à ma demande. Vos données ne seront jamais transmises à des tiers.
+                                        </label>
+                                    </div>
+
+                                    <div class="pt-4">
+                                        <button type="submit" class="w-full md:w-auto px-8 py-4 bg-[#1A2332] text-white font-medium hover:bg-[#4A7BA7] transition-colors duration-300 rounded-sm flex items-center justify-center gap-2 group">
+                                            Envoyer le message
+                                            <iconify-icon icon="lucide:send" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Banner -->
+            <section class="bg-[#F1F5F9] py-16 border-t border-[#E2E8F0]">
+                <div class="max-w-4xl mx-auto px-6 text-center">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-6 text-[#4A7BA7] shadow-sm">
+                        <iconify-icon icon="lucide:help-circle" width="24"></iconify-icon>
+                    </div>
+                    <h2 class="text-2xl font-bold text-[#1A2332] mb-3">Une question rapide ?</h2>
+                    <p class="text-[#475569] mb-8">
+                        De nombreuses réponses concernant les prérequis, les horaires et les tarifs se trouvent déjà dans notre foire aux questions.
+                    </p>
+                    <a href="https://p.superdesign.dev/draft/452b2e6c-4b89-4bab-998c-0b0436ac6a5a" class="inline-flex items-center gap-2 text-[#4A7BA7] font-medium hover:text-[#365D80] transition-colors border-b border-[#4A7BA7] hover:border-[#365D80] pb-0.5">
+                        Consulter la FAQ
+                        <iconify-icon icon="lucide:arrow-right"></iconify-icon>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer (Persistent) -->
+        <footer class="bg-[#0F172A] text-slate-400 pt-20 pb-10 border-t border-slate-800 mt-auto" style="view-transition-name: site-footer">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                    <!-- Brand -->
+                    <div class="space-y-6">
+                        <a href="https://p.superdesign.dev/draft/4f6f94bf-e829-4f84-83b6-3cbe792c1725" class="block">
+                            <span class="font-display font-bold text-2xl text-white tracking-tight">IHMN</span>
+                            <p class="text-[10px] uppercase tracking-widest text-[#4A7BA7] mt-1">Institut d’Hygiène et de Médecine Naturelle</p>
+                        </a>
+                        <p class="text-sm leading-relaxed max-w-xs">
+                            École de référence en Belgique pour la formation professionnelle en naturopathie et techniques de santé naturelle.
+                        </p>
+                    </div>
+
+                    <!-- Links -->
+                    <div>
+                        <h4 class="text-white font-medium mb-6 uppercase tracking-wider text-xs">L'École</h4>
+                        <ul class="space-y-4 text-sm">
+                            <li><a href="https://p.superdesign.dev/draft/f14962ec-3806-411f-a48a-957cc898721d" id="footer-about" class="hover:text-white transition-colors">Notre philosophie</a></li>
+                            <li><a href="https://p.superdesign.dev/draft/673599c3-1e55-4d73-8161-b4bcf8999c38" id="footer-team" class="hover:text-white transition-colors">L'équipe pédagogique</a></li>
+                            <li><a href="https://p.superdesign.dev/draft/dc07bc86-bc0c-49f1-b124-4e92bc8cf440" id="footer-formations" class="hover:text-white transition-colors">Toutes les formations</a></li>
+                            <li><a href="#accreditations" id="footer-accreditations" class="hover:text-white transition-colors">Accréditations</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact -->
+                    <div>
+                        <h4 class="text-white font-medium mb-6 uppercase tracking-wider text-xs">Contact</h4>
+                        <ul class="space-y-4 text-sm">
+                            <li class="flex items-start gap-3">
+                                <iconify-icon icon="lucide:map-pin" class="mt-1 text-[#4A7BA7]"></iconify-icon>
+                                <span>Chaussée de Namur 123<br>5000 Namur, Belgique</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <iconify-icon icon="lucide:phone" class="text-[#4A7BA7]"></iconify-icon>
+                                <span>+32 (0)81 22 33 44</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <iconify-icon icon="lucide:mail" class="text-[#4A7BA7]"></iconify-icon>
+                                <span>secretariat@ihmn.be</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Hours -->
+                    <div>
+                        <h4 class="text-white font-medium mb-6 uppercase tracking-wider text-xs">Horaires secrétariat</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex justify-between">
+                                <span>Lundi - Vendredi</span>
+                                <span>9h00 - 17h00</span>
+                            </li>
+                            <li class="flex justify-between text-[#4A7BA7]">
+                                <span>Samedi - Dimanche</span>
+                                <span>Fermé</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                    <p>&copy; 2024 IHMN. Tous droits réservés.</p>
+                    <div class="flex gap-6">
+                        <a href="#privacy" id="footer-privacy" class="hover:text-white transition-colors">Mentions légales</a>
+                        <a href="#cookies" id="footer-cookies" class="hover:text-white transition-colors">Politique de confidentialité</a>
+                        <a href="#sitemap" id="footer-sitemap" class="hover:text-white transition-colors">Plan du site</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

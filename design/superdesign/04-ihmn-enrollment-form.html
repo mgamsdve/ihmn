@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+    <title>Inscription - IHMN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+    
+    <!-- Prefetch Optimization -->
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/4f6f94bf-e829-4f84-83b6-3cbe792c1725" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/dc07bc86-bc0c-49f1-b124-4e92bc8cf440" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/ed77298b-23c1-4f37-a050-5aea5a98b8fe" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/ac70ea43-ae67-46d3-846d-d84eedbdec88" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/fdbfab77-47a4-4f51-a3dc-520a3d76fb0e" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/f14962ec-3806-411f-a48a-957cc898721d" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/673599c3-1e55-4d73-8161-b4bcf8999c38" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/b83701fb-5761-476f-9701-e9a1c7fc91fa" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/452b2e6c-4b89-4bab-998c-0b0436ac6a5a" as="document">
+
+    <style>
+        :root {
+            --font-display: 'General Sans', sans-serif;
+            --font-body: 'Satoshi', sans-serif;
+            --color-bg: #FFFFFF;
+            --color-text: #1A2332;
+            --color-text-light: #475569;
+            --color-accent: #4A7BA7;
+            --color-accent-dark: #365D80;
+            --color-surface: #F8FAFC;
+            --color-border: #E2E8F0;
+        }
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4, h5, h6, .font-display {
+            font-family: var(--font-display);
+        }
+
+        /* View Transitions Setup */
+        html {
+            background-color: #FFFFFF;
+        }
+        @view-transition {
+            navigation: auto;
+        }
+        ::view-transition {
+            background-color: #FFFFFF;
+        }
+
+        /* Persistent Elements */
+        ::view-transition-old(main-nav),
+        ::view-transition-new(main-nav) {
+            animation: none;
+            mix-blend-mode: normal;
+        }
+
+        ::view-transition-old(main-footer),
+        ::view-transition-new(main-footer) {
+            animation: none;
+            mix-blend-mode: normal;
+        }
+
+        /* Dynamic Content */
+        ::view-transition-old(main-content) {
+            animation: 0.25s ease-out both fade-out;
+        }
+        ::view-transition-new(main-content) {
+            animation: 0.25s ease-in 0.1s both fade-in;
+        }
+
+        @keyframes fade-out {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Form Styles */
+        .form-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background-color: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 0.125rem;
+            color: #1A2332;
+            font-family: var(--font-body);
+            transition: all 0.2s ease;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #4A7BA7;
+            box-shadow: 0 0 0 3px rgba(74, 123, 167, 0.1);
+        }
+        .form-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #1A2332;
+            margin-bottom: 0.5rem;
+        }
+        .form-section-title {
+            font-family: var(--font-display);
+            font-weight: 600;
+            color: #1A2332;
+            font-size: 1.25rem;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #E2E8F0;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .form-step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            background-color: #F1F5F9;
+            color: #4A7BA7;
+            font-weight: 700;
+            font-size: 0.875rem;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen flex flex-col">
+        <!-- Navigation (Persistent) -->
+        <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#E2E8F0]" style="view-transition-name: main-nav">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <!-- Logo Area -->
+                <a href="https://p.superdesign.dev/draft/4f6f94bf-e829-4f84-83b6-3cbe792c1725" id="nav-logo" class="flex flex-col group">
+                    <span class="font-display font-bold text-2xl text-[#1A2332] tracking-tight">IHMN</span>
+                    <span class="text-[10px] uppercase tracking-widest text-[#4A7BA7] font-medium">Depuis 1980</span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="https://p.superdesign.dev/draft/4f6f94bf-e829-4f84-83b6-3cbe792c1725" id="nav-home" class="text-sm font-medium text-[#1A2332] hover:text-[#4A7BA7] transition-colors">Accueil</a>
+                    <a href="https://p.superdesign.dev/draft/dc07bc86-bc0c-49f1-b124-4e92bc8cf440" id="nav-formations" class="text-sm font-medium text-[#1A2332] hover:text-[#4A7BA7] transition-colors">Formations</a>
+                    <a href="https://p.superdesign.dev/draft/f14962ec-3806-411f-a48a-957cc898721d" id="nav-about" class="text-sm font-medium text-[#1A2332] hover:text-[#4A7BA7] transition-colors">À propos</a>
+                    <a href="https://p.superdesign.dev/draft/673599c3-1e55-4d73-8161-b4bcf8999c38" id="nav-team" class="text-sm font-medium text-[#1A2332] hover:text-[#4A7BA7] transition-colors">Équipe</a>
+                    <a href="https://p.superdesign.dev/draft/b83701fb-5761-476f-9701-e9a1c7fc91fa" id="nav-practical" class="text-sm font-medium text-[#1A2332] hover:text-[#4A7BA7] transition-colors">Infos pratiques</a>
+                    <a href="https://p.superdesign.dev/draft/fdbfab77-47a4-4f51-a3dc-520a3d76fb0e" id="nav-contact" class="px-6 py-2.5 bg-[#1A2332] text-white text-sm font-medium hover:bg-[#4A7BA7] transition-colors duration-300 rounded-sm">Contactez-nous</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-[#1A2332]">
+                    <iconify-icon icon="lucide:menu" width="24"></iconify-icon>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content (Dynamic) -->
+        <main class="flex-grow bg-[#F8FAFC]" style="view-transition-name: main-content">
+            <!-- Breadcrumb Header -->
+            <div class="bg-white border-b border-[#E2E8F0]">
+                <div class="max-w-7xl mx-auto px-6 py-8">
+                    <nav class="flex items-center gap-2 text-sm text-[#64748B] mb-4">
+                        <a href="https://p.superdesign.dev/draft/4f6f94bf-e829-4f84-83b6-3cbe792c1725" class="hover:text-[#4A7BA7] transition-colors">Accueil</a>
+                        <iconify-icon icon="lucide:chevron-right" width="14"></iconify-icon>
+                        <a href="https://p.superdesign.dev/draft/dc07bc86-bc0c-49f1-b124-4e92bc8cf440" class="hover:text-[#4A7BA7] transition-colors">Formations</a>
+                        <iconify-icon icon="lucide:chevron-right" width="14"></iconify-icon>
+                        <span class="text-[#1A2332] font-medium">Candidature</span>
+                    </nav>
+                    <h1 class="text-3xl lg:text-4xl font-bold text-[#1A2332] mb-2">Formulaire d'admission</h1>
+                    <p class="text-[#475569] max-w-2xl text-lg">Complétez votre dossier pour rejoindre l'une de nos formations certifiantes. Notre équipe pédagogique étudiera votre demande dans les plus brefs délais.</p>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-6 py-12">
+                <div class="grid lg:grid-cols-12 gap-12">
+                    
+                    <!-- Left Column: The Form -->
+                    <div class="lg:col-span-8">
+                        <form class="bg-white border border-[#E2E8F0] p-8 md:p-10 rounded-sm shadow-sm">
+                            
+                            <!-- Section 1 -->
+                            <div class="mb-10">
+                                <h2 class="form-section-title">
+                                    <span class="form-step-number">1</span>
+                                    Choix de la formation
+                                </h2>
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div class="md:col-span-2">
+                                        <label class="form-label" for="formation-select">Cursus souhaité <span class="text-red-500">*</span></label>
+                                        <select id="formation-select" class="form-input cursor-pointer">
+                                            <option value="" disabled selected>Sélectionnez une formation</option>
+                                            <option value="naturopathie">Naturopathe (Cursus Complet - 4 ans)</option>
+                                            <option value="nutrition">Conseiller en Nutrition (2 ans)</option>
+                                            <option value="phyto">Phytothérapie & Aromathérapie (1 an)</option>
+                                            <option value="hygiene">Hygiéniste-Naturopathe (Base)</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="form-label" for="start-date">Session de démarrage <span class="text-red-500">*</span></label>
+                                        <select id="start-date" class="form-input cursor-pointer">
+                                            <option value="sep-2024">Septembre 2024</option>
+                                            <option value="jan-2025">Janvier 2025 (Rentrée décalée)</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="form-label" for="campus">Campus <span class="text-red-500">*</span></label>
+                                        <select id="campus" class="form-input cursor-pointer">
+                                            <option value="namur">Namur (Principal)</option>
+                                            <option value="liege">Liège</option>
+                                            <option value="distanciel">E-learning / Distanciel</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Section 2 -->
+                            <div class="mb-10">
+                                <h2 class="form-section-title">
+                                    <span class="form-step-number">2</span>
+                                    Informations personnelles
+                                </h2>
+                                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                    <div>
+                                        <label class="form-label" for="firstname">Prénom <span class="text-red-500">*</span></label>
+                                        <input type="text" id="firstname" class="form-input" placeholder="Jean">
+                                    </div>
+                                    <div>
+                                        <label class="form-label" for="lastname">Nom <span class="text-red-500">*</span></label>
+                                        <input type="text" id="lastname" class="form-input" placeholder="Dupont">
+                                    </div>
+                                </div>
+                                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                    <div>
+                                        <label class="form-label" for="email">Email <span class="text-red-500">*</span></label>
+                                        <input type="email" id="email" class="form-input" placeholder="jean.dupont@email.com">
+                                    </div>
+                                    <div>
+                                        <label class="form-label" for="phone">Téléphone <span class="text-red-500">*</span></label>
+                                        <input type="tel" id="phone" class="form-input" placeholder="+32 4XX XX XX XX">
+                                    </div>
+                                </div>
+                                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                    <div>
+                                        <label class="form-label" for="birthdate">Date de naissance <span class="text-red-500">*</span></label>
+                                        <input type="date" id="birthdate" class="form-input text-[#475569]">
+                                    </div>
+                                    <div>
+                                        <label class="form-label" for="profession">Profession actuelle</label>
+                                        <input type="text" id="profession" class="form-input" placeholder="Ex: Enseignant, Infirmier...">
+                                    </div>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label class="form-label" for="address">Adresse complète</label>
+                                    <input type="text" id="address" class="form-input" placeholder="Rue, Numéro, Code postal, Ville">
+                                </div>
+                            </div>
+
+                            <!-- Section 3 -->
+                            <div class="mb-10">
+                                <h2 class="form-section-title">
+                                    <span class="form-step-number">3</span>
+                                    Parcours & Motivation
+                                </h2>
+                                <div class="space-y-6">
+                                    <div>
+                                        <label class="form-label" for="background">Parcours scolaire et professionnel (résumé) <span class="text-red-500">*</span></label>
+                                        <textarea id="background" rows="4" class="form-input" placeholder="Décrivez brièvement vos études précédentes et votre expérience professionnelle..."></textarea>
+                                    </div>
+                                    <div>
+                                        <label class="form-label" for="motivation">Pourquoi souhaitez-vous rejoindre cette formation ? <span class="text-red-500">*</span></label>
+                                        <textarea id="motivation" rows="4" class="form-input" placeholder="Expliquez votre projet professionnel, vos attentes, ce qui vous amène vers la santé naturelle..."></textarea>
+                                    </div>
+                                    <div>
+                                        <label class="form-label">Documents annexes (CV, Lettre de motivation) - Optionnel</label>
+                                        <div class="border-2 border-dashed border-[#E2E8F0] rounded-sm p-6 text-center hover:bg-[#F8FAFC] transition-colors cursor-pointer">
+                                            <iconify-icon icon="lucide:upload-cloud" class="text-3xl text-[#94A3B8] mb-2"></iconify-icon>
+                                            <p class="text-sm text-[#475569]"><span class="text-[#4A7BA7] font-medium">Cliquez pour importer</span> ou glissez vos fichiers ici</p>
+                                            <p class="text-xs text-[#94A3B8] mt-1">PDF, DOCX (Max 5Mo)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Section 4 -->
+                            <div class="mb-10">
+                                <h2 class="form-section-title">
+                                    <span class="form-step-number">4</span>
+                                    Modalités pratiques
+                                </h2>
+                                <div class="space-y-4">
+                                    <label class="form-label block mb-3">Préférence de paiement</label>
+                                    <div class="grid md:grid-cols-2 gap-4">
+                                        <label class="relative flex items-start gap-3 p-4 border border-[#E2E8F0] rounded-sm cursor-pointer hover:border-[#4A7BA7] transition-colors">
+                                            <input type="radio" name="payment" value="annual" class="mt-1 text-[#4A7BA7] focus:ring-[#4A7BA7]">
+                                            <div>
+                                                <span class="block font-medium text-[#1A2332]">Paiement annuel</span>
+                                                <span class="block text-xs text-[#64748B] mt-1">5% de réduction sur le minerval</span>
+                                            </div>
+                                        </label>
+                                        <label class="relative flex items-start gap-3 p-4 border border-[#E2E8F0] rounded-sm cursor-pointer hover:border-[#4A7BA7] transition-colors">
+                                            <input type="radio" name="payment" value="monthly" class="mt-1 text-[#4A7BA7] focus:ring-[#4A7BA7]">
+                                            <div>
+                                                <span class="block font-medium text-[#1A2332]">Paiement échelonné</span>
+                                                <span class="block text-xs text-[#64748B] mt-1">Mensualités fixes sur 10 mois</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Submit Area -->
+                            <div class="pt-6 border-t border-[#E2E8F0]">
+                                <div class="flex items-start gap-3 mb-8">
+                                    <input type="checkbox" id="terms" class="mt-1 rounded border-gray-300 text-[#4A7BA7] focus:ring-[#4A7BA7]">
+                                    <label for="terms" class="text-sm text-[#475569] leading-relaxed">
+                                        Je certifie l'exactitude des informations fournies et j'accepte que l'IHMN traite mes données dans le cadre de ma candidature, conformément à la <a href="#" class="text-[#4A7BA7] underline underline-offset-2">politique de confidentialité</a>.
+                                    </label>
+                                </div>
+                                <button type="submit" class="w-full md:w-auto px-8 py-4 bg-[#1A2332] text-white font-medium hover:bg-[#4A7BA7] transition-colors duration-300 rounded-sm flex items-center justify-center gap-2">
+                                    <span>Envoyer ma candidature</span>
+                                    <iconify-icon icon="lucide:arrow-right"></iconify-icon>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Right Column: Sidebar (Sticky) -->
+                    <aside class="lg:col-span-4 space-y-6">
+                        <!-- Info Card -->
+                        <div class="bg-white border border-[#E2E8F0] p-6 lg:p-8 rounded-sm sticky top-28">
+                            <h3 class="text-lg font-bold text-[#1A2332] mb-6 font-display">Pourquoi choisir l'IHMN ?</h3>
+                            <ul class="space-y-4 mb-8">
+                                <li class="flex gap-3 text-sm text-[#475569]">
+                                    <iconify-icon icon="lucide:check-circle-2" class="text-[#4A7BA7] text-lg shrink-0"></iconify-icon>
+                                    <span>Diplômes certifiés par les fédérations professionnelles</span>
+                                </li>
+                                <li class="flex gap-3 text-sm text-[#475569]">
+                                    <iconify-icon icon="lucide:check-circle-2" class="text-[#4A7BA7] text-lg shrink-0"></iconify-icon>
+                                    <span>+40 ans d'expérience dans l'enseignement</span>
+                                </li>
+                                <li class="flex gap-3 text-sm text-[#475569]">
+                                    <iconify-icon icon="lucide:check-circle-2" class="text-[#4A7BA7] text-lg shrink-0"></iconify-icon>
+                                    <span>Accompagnement personnalisé vers l'installation</span>
+                                </li>
+                            </ul>
+
+                            <div class="border-t border-[#E2E8F0] pt-6">
+                                <h4 class="text-sm font-bold text-[#1A2332] mb-2">Une question avant de vous inscrire ?</h4>
+                                <p class="text-sm text-[#64748B] mb-4">Notre secrétariat est disponible pour vous orienter vers la formation la plus adaptée.</p>
+                                <a href="https://p.superdesign.dev/draft/fdbfab77-47a4-4f51-a3dc-520a3d76fb0e" class="flex items-center gap-2 text-[#4A7BA7] font-medium text-sm hover:text-[#365D80] transition-colors">
+                                    <iconify-icon icon="lucide:phone"></iconify-icon>
+                                    <span>Nous contacter</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial Tiny -->
+                        <div class="bg-[#F1F5F9] p-6 rounded-sm border border-[#E2E8F0]">
+                            <div class="flex gap-1 text-[#4A7BA7] mb-3">
+                                <iconify-icon icon="lucide:star" class="text-sm fill-current"></iconify-icon>
+                                <iconify-icon icon="lucide:star" class="text-sm fill-current"></iconify-icon>
+                                <iconify-icon icon="lucide:star" class="text-sm fill-current"></iconify-icon>
+                                <iconify-icon icon="lucide:star" class="text-sm fill-current"></iconify-icon>
+                                <iconify-icon icon="lucide:star" class="text-sm fill-current"></iconify-icon>
+                            </div>
+                            <p class="text-sm italic text-[#475569] mb-3">"Le processus d'inscription a été simple et j'ai été très bien conseillée sur le choix de mon cursus."</p>
+                            <span class="text-xs font-bold text-[#1A2332]">Marie L., Promotion 2023</span>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer (Persistent) -->
+        <footer class="bg-[#0F172A] text-slate-400 pt-20 pb-10 border-t border-slate-800 mt-auto" style="view-transition-name: main-footer">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                    <!-- Brand -->
+                    <div class="space-y-6">
+                        <a href="https://p.superdesign.dev/draft/4f6f94bf-e829-4f84-83b6-3cbe792c1725" class="block">
+                            <span class="font-display font-bold text-2xl text-white tracking-tight">IHMN</span>
+                            <p class="text-[10px] uppercase tracking-widest text-[#4A7BA7] mt-1">Institut d’Hygiène et de Médecine Naturelle</p>
+                        </a>
+                        <p class="text-sm leading-relaxed max-w-xs">
+                            École de référence en Belgique pour la formation professionnelle en naturopathie et techniques de santé naturelle.
+                        </p>
+                    </div>
+
+                    <!-- Links -->
+                    <div>
+                        <h4 class="text-white font-medium mb-6 uppercase tracking-wider text-xs">L'École</h4>
+                        <ul class="space-y-4 text-sm">
+                            <li><a href="https://p.superdesign.dev/draft/f14962ec-3806-411f-a48a-957cc898721d" id="footer-about" class="hover:text-white transition-colors">Notre philosophie</a></li>
+                            <li><a href="https://p.superdesign.dev/draft/673599c3-1e55-4d73-8161-b4bcf8999c38" id="footer-team" class="hover:text-white transition-colors">L'équipe pédagogique</a></li>
+                            <li><a href="https://p.superdesign.dev/draft/dc07bc86-bc0c-49f1-b124-4e92bc8cf440" id="footer-formations" class="hover:text-white transition-colors">Toutes les formations</a></li>
+                            <li><a href="#" id="footer-accreditations" class="hover:text-white transition-colors">Accréditations</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact -->
+                    <div>
+                        <h4 class="text-white font-medium mb-6 uppercase tracking-wider text-xs">Contact</h4>
+                        <ul class="space-y-4 text-sm">
+                            <li class="flex items-start gap-3">
+                                <iconify-icon icon="lucide:map-pin" class="mt-1 text-[#4A7BA7]"></iconify-icon>
+                                <span>Chaussée de Namur 123<br>5000 Namur, Belgique</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <iconify-icon icon="lucide:phone" class="text-[#4A7BA7]"></iconify-icon>
+                                <span>+32 (0)81 22 33 44</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <iconify-icon icon="lucide:mail" class="text-[#4A7BA7]"></iconify-icon>
+                                <span>secretariat@ihmn.be</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Hours -->
+                    <div>
+                        <h4 class="text-white font-medium mb-6 uppercase tracking-wider text-xs">Horaires secrétariat</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex justify-between">
+                                <span>Lundi - Vendredi</span>
+                                <span>9h00 - 17h00</span>
+                            </li>
+                            <li class="flex justify-between text-[#4A7BA7]">
+                                <span>Samedi - Dimanche</span>
+                                <span>Fermé</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                    <p>&copy; 2024 IHMN. Tous droits réservés.</p>
+                    <div class="flex gap-6">
+                        <a href="#" id="footer-privacy" class="hover:text-white transition-colors">Mentions légales</a>
+                        <a href="#" id="footer-cookies" class="hover:text-white transition-colors">Politique de confidentialité</a>
+                        <a href="#" id="footer-sitemap" class="hover:text-white transition-colors">Plan du site</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - IHMN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+    
+    <!-- View Transitions API Setup -->
+    <meta name="view-transition" content="same-origin">
+    
+    <!-- Prefetch Optimization -->
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/4f6f94bf-e829-4f84-83b6-3cbe792c1725" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/dc07bc86-bc0c-49f1-b124-4e92bc8cf440" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/ed77298b-23c1-4f37-a050-5aea5a98b8fe" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/ac70ea43-ae67-46d3-846d-d84eedbdec88" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/fdbfab77-47a4-4f51-a3dc-520a3d76fb0e" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/f14962ec-3806-411f-a48a-957cc898721d" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/673599c3-1e55-4d73-8161-b4bcf8999c38" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/b83701fb-5761-476f-9701-e9a1c7fc91fa" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/452b2e6c-4b89-4bab-998c-0b0436ac6a5a" as="document">
+
+    <style>
+        :root {
+            --font-display: 'General Sans', sans-serif;
+            --font-body: 'Satoshi', sans-serif;
+            --color-bg: #FFFFFF;
+            --color-text: #1A2332;
+            --color-text-light: #475569;
+            --color-accent: #4A7BA7;
+            --color-accent-dark: #365D80;
+            --color-surface: #F8FAFC;
+            --color-border: #E2E8F0;
+        }
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4, h5, h6, .font-display {
+            font-family: var(--font-display);
+        }
+
+        /* View Transition Animations */
+        html {
+            background-color: var(--color-bg);
+        }
+        @view-transition {
+            navigation: auto;
+        }
+        ::view-transition {
+            background-color: var(--color-bg);
+        }
+
+        /* Persistent elements - NO animation */
+        ::view-transition-old(main-header),
+        ::view-transition-new(main-header),
+        ::view-transition-old(main-footer),
+        ::view-transition-new(main-footer) {
+            animation: none;
+            mix-blend-mode: normal;
+        }
+
+        /* Dynamic content - Fade animation */
+        ::view-transition-old(main-content) {
+            animation: 0.25s ease-out both fade-out;
+        }
+        ::view-transition-new(main-content) {
+            animation: 0.25s ease-in 0.1s both fade-in;
+        }
+
+        @keyframes fade-out {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        ::view-transition-old(root),
+        ::view-transition-new(root) {
+            animation: none;
+            mix-blend-mode: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen flex flex-col">
+        <!-- Navigation (Persistent) -->
+        <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#E2E8F0]" style="view-transition-name: main-header">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <!-- Logo Area -->
+                <a href="https://p.superdesign.dev/draft/4f6f94bf-e829-4f84-83b6-3cbe792c1725" id="nav-logo" class="flex flex-col group">
+                    <span class="font-display font-bold text-2xl text-[#1A2332] tracking-tight">IHMN</span>
+                    <span class="text-[10px] uppercase tracking-widest text-[#4A7BA7] font-medium">Depuis 1980</span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="https://p.superdesign.dev/draft/4f6f94bf-e829-4f84-83b6-3cbe792c1725" id="nav-home" class="text-sm font-medium text-[#1A2332] hover:text-[#4A7BA7] transition-colors">Accueil</a>
+                    <a href="https://p.superdesign.dev/draft/dc07bc86-bc0c-49f1-b124-4e92bc8cf440" id="nav-formations" class="text-sm font-medium text-[#1A2332] hover:text-[#4A7BA7] transition-colors">Formations</a>
+                    <a href="https://p.superdesign.dev/draft/f14962ec-3806-411f-a48a-957cc898721d" id="nav-about" class="text-sm font-medium text-[#4A7BA7] transition-colors">À propos</a>
+                    <a href="https://p.superdesign.dev/draft/673599c3-1e55-4d73-8161-b4bcf8999c38" id="nav-team" class="text-sm font-medium text-[#1A2332] hover:text-[#4A7BA7] transition-colors">Équipe</a>
+                    <a href="https://p.superdesign.dev/draft/b83701fb-5761-476f-9701-e9a1c7fc91fa" id="nav-practical" class="text-sm font-medium text-[#1A2332] hover:text-[#4A7BA7] transition-colors">Infos pratiques</a>
+                    <a href="https://p.superdesign.dev/draft/fdbfab77-47a4-4f51-a3dc-520a3d76fb0e" id="nav-contact" class="px-6 py-2.5 bg-[#1A2332] text-white text-sm font-medium hover:bg-[#4A7BA7] transition-colors duration-300 rounded-sm">Contactez-nous</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-[#1A2332]">
+                    <iconify-icon icon="lucide:menu" width="24"></iconify-icon>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content (Dynamic) -->
+        <main class="flex-grow" style="view-transition-name: main-content">
+            
+            <!-- Page Header -->
+            <section class="bg-[#F8FAFC] py-16 lg:py-24 border-b border-[#E2E8F0]">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="max-w-3xl">
+                        <nav class="flex items-center gap-2 text-xs text-[#64748B] mb-6 uppercase tracking-widest font-medium">
+                            <a href="https://p.superdesign.dev/draft/4f6f94bf-e829-4f84-83b6-3cbe792c1725" class="hover:text-[#4A7BA7]">Accueil</a>
+                            <iconify-icon icon="lucide:chevron-right"></iconify-icon>
+                            <span class="text-[#1A2332]">À propos</span>
+                        </nav>
+                        <h1 class="text-4xl lg:text-5xl font-bold text-[#1A2332] tracking-tight mb-6">
+                            L'Institut d’Hygiène et de Médecine Naturelle
+                        </h1>
+                        <p class="text-lg lg:text-xl text-[#475569] leading-relaxed">
+                            Depuis plus de quatre décennies, nous œuvrons pour une naturopathie rigoureuse, scientifique et profondément humaine. 
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mission & Introduction -->
+            <section class="py-20 lg:py-28 bg-white">
+                <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-start">
+                    <div>
+                        <h2 class="text-2xl font-bold text-[#1A2332] mb-6">Notre Mission</h2>
+                        <p class="text-[#475569] leading-relaxed mb-6">
+                            L'IHMN a été fondé avec une conviction simple mais puissante : la santé naturelle ne doit pas être une alternative marginale, mais une discipline complémentaire fondée sur des connaissances solides.
+                        </p>
+                        <p class="text-[#475569] leading-relaxed">
+                            Notre mission est de former des praticiens de santé capables de faire le pont entre la tradition naturopathique et les exigences scientifiques modernes. Nous formons des professionnels responsables, conscients de leurs limites et de leur immense potentiel d'accompagnement.
+                        </p>
+                        
+                        <div class="mt-8 pt-8 border-t border-[#E2E8F0] flex gap-12">
+                            <div>
+                                <span class="block text-4xl font-bold text-[#4A7BA7] font-display">1980</span>
+                                <span class="text-xs text-[#64748B] uppercase tracking-wider mt-1 block">Année de création</span>
+                            </div>
+                            <div>
+                                <span class="block text-4xl font-bold text-[#4A7BA7] font-display">2000+</span>
+                                <span class="text-xs text-[#64748B] uppercase tracking-wider mt-1 block">Diplômés</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative">
+                        <div class="aspect-[4/3] bg-[#F1F5F9] rounded-sm overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Interior of IHMN school library" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-[#F8FAFC] border border-[#E2E8F0] p-6 hidden lg:flex flex-col justify-center">
+                            <iconify-icon icon="lucide:award" class="text-[#4A7BA7] text-3xl mb-3"></iconify-icon>
+                            <p class="text-sm font-medium text-[#1A2332]">Reconnue par les unions professionnelles</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- History Timeline -->
+            <section class="py-20 bg-[#F8FAFC] border-y border-[#E2E8F0]">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="max-w-2xl mx-auto text-center mb-16">
+                        <h2 class="text-3xl font-bold text-[#1A2332] mb-4">Notre Histoire</h2>
+                        <p class="text-[#475569]">Un parcours dédié à l'enseignement et à la reconnaissance de la profession.</p>
+                    </div>
+
+                    <div class="relative max-w-4xl mx-auto">
+                        <!-- Vertical Line -->
+                        <div class="absolute left-[15px] lg:left-1/2 top-0 bottom-0 w-px bg-[#E2E8F0] -translate-x-1/2"></div>
+
+                        <!-- Item 1 -->
+                        <div class="relative flex flex-col lg:flex-row items-start lg:items-center justify-between mb-12 group">
+                            <div class="lg:w-[45%] lg:text-right pl-12 lg:pl-0 lg:pr-12">
+                                <span class="text-[#4A7BA7] font-bold text-xl font-display mb-1 block">1980</span>
+                                <h3 class="text-lg font-bold text-[#1A2332] mb-2">Fondation de l'Institut</h3>
+                                <p class="text-sm text-[#475569]">Création de l'école par une équipe de médecins et de naturopathes passionnés, avec la volonté de structurer l'enseignement de la santé naturelle en Belgique.</p>
+                            </div>
+                            <div class="absolute left-[15px] lg:left-1/2 w-4 h-4 rounded-full bg-white border-4 border-[#4A7BA7] -translate-x-1/2 z-10"></div>
+                            <div class="hidden lg:block lg:w-[45%]"></div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="relative flex flex-col lg:flex-row-reverse items-start lg:items-center justify-between mb-12 group">
+                            <div class="lg:w-[45%] pl-12">
+                                <span class="text-[#4A7BA7] font-bold text-xl font-display mb-1 block">1998</span>
+                                <h3 class="text-lg font-bold text-[#1A2332] mb-2">Évolution du Cursus</h3>
+                                <p class="text-sm text-[#475569]">Le programme s'allonge pour atteindre 4 années d'études complètes, intégrant davantage de sciences fondamentales (anatomie, physiologie, pathologie).</p>
+                            </div>
+                            <div class="absolute left-[15px] lg:left-1/2 w-4 h-4 rounded-full bg-white border-4 border-[#E2E8F0] group-hover:border-[#4A7BA7] transition-colors -translate-x-1/2 z-10"></div>
+                            <div class="hidden lg:block lg:w-[45%]"></div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="relative flex flex-col lg:flex-row items-start lg:items-center justify-between mb-12 group">
+                            <div class="lg:w-[45%] lg:text-right pl-12 lg:pl-0 lg:pr-12">
+                                <span class="text-[#4A7BA7] font-bold text-xl font-display mb-1 block">2010</span>
+                                <h3 class="text-lg font-bold text-[#1A2332] mb-2">Partenariats Européens</h3>
+                                <p class="text-sm text-[#475569]">L'IHMN tisse des liens avec d'autres institutions européennes pour favoriser la mobilité des étudiants et l'harmonisation des standards de formation.</p>
+                            </div>
+                            <div class="absolute left-[15px] lg:left-1/2 w-4 h-4 rounded-full bg-white border-4 border-[#E2E8F0] group-hover:border-[#4A7BA7] transition-colors -translate-x-1/2 z-10"></div>
+                            <div class="hidden lg:block lg:w-[45%]"></div>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="relative flex flex-col lg:flex-row-reverse items-start lg:items-center justify-between group">
+                            <div class="lg:w-[45%] pl-12">
+                                <span class="text-[#4A7BA7] font-bold text-xl font-display mb-1 block">Aujourd'hui</span>
+                                <h3 class="text-lg font-bold text-[#1A2332] mb-2">Une Référence Incontournable</h3>
+                                <p class="text-sm text-[#475569]">L'école continue d'innover avec des formations continues, un encadrement pédagogique renforcé et une communauté d'alumni active dans toute la Belgique.</p>
+                            </div>
+                            <div class="absolute left-[15px] lg:left-1/2 w-4 h-4 rounded-full bg-[#4A7BA7] border-4 border-[#E2E8F0] -translate-x-1/2 z-10"></div>
+                            <div class="hidden lg:block lg:w-[45%]"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Educational Philosophy & Values -->
+            <section class="py-20 lg:py-28 bg-white">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="grid lg:grid-cols-3 gap-12">
+                        <!-- Header -->
+                        <div class="lg:col-span-1">
+                            <h2 class="text-3xl font-bold text-[#1A2332] mb-6">Nos Valeurs Fondamentales</h2>
+                            <p class="text-[#475569] mb-8">
+                                Au-delà des connaissances techniques, nous transmettons un savoir-être indispensable à la pratique de la relation d'aide.
+                            </p>
+                            <a href="https://p.superdesign.dev/draft/dc07bc86-bc0c-49f1-b124-4e92bc8cf440" class="inline-flex items-center gap-2 text-[#4A7BA7] font-medium hover:text-[#365D80] transition-colors">
+                                Découvrir nos formations
+                                <iconify-icon icon="lucide:arrow-right"></iconify-icon>
+                            </a>
+                        </div>
+
+                        <!-- Cards Grid -->
+                        <div class="lg:col-span-2 grid sm:grid-cols-2 gap-6">
+                            <!-- Value 1 -->
+                            <div class="p-8 bg-[#F8FAFC] border border-[#E2E8F0]">
+                                <iconify-icon icon="lucide:microscope" class="text-[#4A7BA7] text-3xl mb-4"></iconify-icon>
+                                <h3 class="text-lg font-bold text-[#1A2332] mb-3">Rigueur Scientifique</h3>
+                                <p class="text-sm text-[#475569] leading-relaxed">
+                                    Nous ne rejetons pas la médecine allopathique; nous la complétons. Nos cours s'appuient sur l'anatomie et la physiologie pour une pratique sécuritaire.
+                                </p>
+                            </div>
+
+                            <!-- Value 2 -->
+                            <div class="p-8 bg-[#F8FAFC] border border-[#E2E8F0]">
+                                <iconify-icon icon="lucide:heart-handshake" class="text-[#4A7BA7] text-3xl mb-4"></iconify-icon>
+                                <h3 class="text-lg font-bold text-[#1A2332] mb-3">Bienveillance</h3>
+                                <p class="text-sm text-[#475569] leading-relaxed">
+                                    L'écoute et l'empathie sont au cœur de notre pédagogie. Nous formons des thérapeutes qui savent accueillir l'humain dans sa globalité.
+                                </p>
+                            </div>
+
+                            <!-- Value 3 -->
+                            <div class="p-8 bg-[#F8FAFC] border border-[#E2E8F0]">
+                                <iconify-icon icon="lucide:sprout" class="text-[#4A7BA7] text-3xl mb-4"></iconify-icon>
+                                <h3 class="text-lg font-bold text-[#1A2332] mb-3">Vitalisme</h3>
+                                <p class="text-sm text-[#475569] leading-relaxed">
+                                    Nous croyons en la force vitale et en la capacité d'auto-guérison du corps, principes fondateurs de la naturopathie traditionnelle.
+                                </p>
+                            </div>
+
+                            <!-- Value 4 -->
+                            <div class="p-8 bg-[#F8FAFC] border border-[#E2E8F0]">
+                                <iconify-icon icon="lucide:graduation-cap" class="text-[#4A7BA7] text-3xl mb-4"></iconify-icon>
+                                <h3 class="text-lg font-bold text-[#1A2332] mb-3">Autonomie</h3>
+                                <p class="text-sm text-[#475569] leading-relaxed">
+                                    Notre but est de rendre nos étudiants autonomes dans leur réflexion, capables d'élaborer des stratégies de santé personnalisées.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team Preview CTA -->
+            <section class="py-24 bg-[#1A2332] text-white overflow-hidden relative">
+                <!-- Decorative pattern -->
+                <div class="absolute top-0 right-0 p-12 opacity-5">
+                    <iconify-icon icon="lucide:users" width="400"></iconify-icon>
+                </div>
+
+                <div class="max-w-7xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
+                    <div class="max-w-2xl">
+                        <h2 class="text-3xl font-bold font-display mb-6">Une équipe pédagogique passionnée</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed mb-8">
+                            L'âme de l'IHMN, ce sont ses formateurs. Naturopathes, médecins, nutritionnistes et spécialistes de terrain qui partagent leur expérience avec générosité.
+                        </p>
+                        <a href="https://p.superdesign.dev/draft/673599c3-1e55-4d73-8161-b4bcf8999c38" class="inline-flex items-center justify-center px-8 py-4 bg-[#4A7BA7] text-white font-medium hover:bg-[#365D80] transition-colors duration-300 rounded-sm">
+                            Rencontrer l'équipe
+                        </a>
+                    </div>
+                    
+                    <div class="flex -space-x-6">
+                        <img class="w-20 h-20 rounded-full border-4 border-[#1A2332] object-cover" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Trainer 1">
+                        <img class="w-20 h-20 rounded-full border-4 border-[#1A2332] object-cover" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Trainer 2">
+                        <img class="w-20 h-20 rounded-full border-4 border-[#1A2332] object-cover" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Trainer 3">
+                        <div class="w-20 h-20 rounded-full border-4 border-[#1A2332] bg-[#334155] flex items-center justify-center text-sm font-bold">
+                            +15
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer (Persistent) -->
+        <footer class="bg-[#0F172A] text-slate-400 pt-20 pb-10 border-t border-slate-800 mt-auto" style="view-transition-name: main-footer">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                    <!-- Brand -->
+                    <div class="space-y-6">
+                        <a href="https://p.superdesign.dev/draft/4f6f94bf-e829-4f84-83b6-3cbe792c1725" class="block">
+                            <span class="font-display font-bold text-2xl text-white tracking-tight">IHMN</span>
+                            <p class="text-[10px] uppercase tracking-widest text-[#4A7BA7] mt-1">Institut d’Hygiène et de Médecine Naturelle</p>
+                        </a>
+                        <p class="text-sm leading-relaxed max-w-xs">
+                            École de référence en Belgique pour la formation professionnelle en naturopathie et techniques de santé naturelle.
+                        </p>
+                    </div>
+
+                    <!-- Links -->
+                    <div>
+                        <h4 class="text-white font-medium mb-6 uppercase tracking-wider text-xs">L'École</h4>
+                        <ul class="space-y-4 text-sm">
+                            <li><a href="https://p.superdesign.dev/draft/f14962ec-3806-411f-a48a-957cc898721d" id="footer-about" class="hover:text-white transition-colors">Notre philosophie</a></li>
+                            <li><a href="https://p.superdesign.dev/draft/673599c3-1e55-4d73-8161-b4bcf8999c38" id="footer-team" class="hover:text-white transition-colors">L'équipe pédagogique</a></li>
+                            <li><a href="https://p.superdesign.dev/draft/dc07bc86-bc0c-49f1-b124-4e92bc8cf440" id="footer-formations" class="hover:text-white transition-colors">Toutes les formations</a></li>
+                            <li><a href="#" id="footer-accreditations" class="hover:text-white transition-colors">Accréditations</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact -->
+                    <div>
+                        <h4 class="text-white font-medium mb-6 uppercase tracking-wider text-xs">Contact</h4>
+                        <ul class="space-y-4 text-sm">
+                            <li class="flex items-start gap-3">
+                                <iconify-icon icon="lucide:map-pin" class="mt-1 text-[#4A7BA7]"></iconify-icon>
+                                <span>Chaussée de Namur 123<br>5000 Namur, Belgique</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <iconify-icon icon="lucide:phone" class="text-[#4A7BA7]"></iconify-icon>
+                                <span>+32 (0)81 22 33 44</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <iconify-icon icon="lucide:mail" class="text-[#4A7BA7]"></iconify-icon>
+                                <span>secretariat@ihmn.be</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Hours -->
+                    <div>
+                        <h4 class="text-white font-medium mb-6 uppercase tracking-wider text-xs">Horaires secrétariat</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex justify-between">
+                                <span>Lundi - Vendredi</span>
+                                <span>9h00 - 17h00</span>
+                            </li>
+                            <li class="flex justify-between text-[#4A7BA7]">
+                                <span>Samedi - Dimanche</span>
+                                <span>Fermé</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                    <p>&copy; 2024 IHMN. Tous droits réservés.</p>
+                    <div class="flex gap-6">
+                        <a href="#" id="footer-privacy" class="hover:text-white transition-colors">Mentions légales</a>
+                        <a href="#" id="footer-cookies" class="hover:text-white transition-colors">Politique de confidentialité</a>
+                        <a href="#" id="footer-sitemap" class="hover:text-white transition-colors">Plan du site</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

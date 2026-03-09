@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - IHMN</title>
+    <meta name="view-transition" content="same-origin">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+    
+    <!-- Prefetch Optimization -->
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/4f6f94bf-e829-4f84-83b6-3cbe792c1725" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/dc07bc86-bc0c-49f1-b124-4e92bc8cf440" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/ed77298b-23c1-4f37-a050-5aea5a98b8fe" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/ac70ea43-ae67-46d3-846d-d84eedbdec88" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/fdbfab77-47a4-4f51-a3dc-520a3d76fb0e" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/f14962ec-3806-411f-a48a-957cc898721d" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/673599c3-1e55-4d73-8161-b4bcf8999c38" as="document">
+    <link rel="prefetch" href="https://p.superdesign.dev/draft/b83701fb-5761-476f-9701-e9a1c7fc91fa" as="document">
+    
+    <style>
+        :root {
+            --font-display: 'General Sans', sans-serif;
+            --font-body: 'Satoshi', sans-serif;
+            --color-bg: #FFFFFF;
+            --color-text: #1A2332;
+            --color-text-light: #475569;
+            --color-accent: #4A7BA7;
+            --color-accent-dark: #365D80;
+            --color-surface: #F8FAFC;
+            --color-border: #E2E8F0;
+        }
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4, h5, h6, .font-display {
+            font-family: var(--font-display);
+        }
+        
+        /* View Transitions */
+        html {
+            background-color: #FFFFFF;
+        }
+        ::view-transition-old(root),
+        ::view-transition-new(root) {
+            animation: none;
+            mix-blend-mode: normal;
+        }
+        
+        /* Persistent Elements */
+        ::view-transition-old(site-header),
+        ::view-transition-new(site-header),
+        ::view-transition-old(site-footer),
+        ::view-transition-new(site-footer) {
+            animation: none;
+            mix-blend-mode: normal;
+        }
+        
+        /* Dynamic Content */
+        ::view-transition-old(main-content) {
+            animation: 0.25s ease-out both fade-out;
+        }
+        ::view-transition-new(main-content) {
+            animation: 0.25s ease-in 0.1s both fade-in;
+        }
+        
+        @keyframes fade-out {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Custom Details/Summary Styles */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary ~ * {
+            animation: sweep .3s ease-in-out;
+        }
+        @keyframes sweep {
+            0%    {opacity: 0; transform: translateY(-10px)}
+            100%  {opacity: 1; transform: translateY(0)}
+        }
+        details[open] .icon-plus {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen flex flex-col">
+        <!-- Navigation (Persistent) -->
+        <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#E2E8F0]" style="view-transition-name: site-header">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <!-- Logo Area -->
+                <a href="https://p.superdesign.dev/draft/4f6f94bf-e829-4f84-83b6-3cbe792c1725" id="nav-logo" class="flex flex-col group">
+                    <span class="font-display font-bold text-2xl text-[#1A2332] tracking-tight">IHMN</span>
+                    <span class="text-[10px] uppercase tracking-widest text-[#4A7BA7] font-medium">Depuis 1980</span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="https://p.superdesign.dev/draft/4f6f94bf-e829-4f84-83b6-3cbe792c1725" id="nav-home" class="text-sm font-medium text-[#1A2332] hover:text-[#4A7BA7] transition-colors">Accueil</a>
+                    <a href="https://p.superdesign.dev/draft/dc07bc86-bc0c-49f1-b124-4e92bc8cf440" id="nav-formations" class="text-sm font-medium text-[#1A2332] hover:text-[#4A7BA7] transition-colors">Formations</a>
+                    <a href="https://p.superdesign.dev/draft/f14962ec-3806-411f-a48a-957cc898721d" id="nav-about" class="text-sm font-medium text-[#1A2332] hover:text-[#4A7BA7] transition-colors">À propos</a>
+                    <a href="https://p.superdesign.dev/draft/673599c3-1e55-4d73-8161-b4bcf8999c38" id="nav-team" class="text-sm font-medium text-[#1A2332] hover:text-[#4A7BA7] transition-colors">Équipe</a>
+                    <a href="https://p.superdesign.dev/draft/b83701fb-5761-476f-9701-e9a1c7fc91fa" id="nav-practical" class="text-sm font-medium text-[#1A2332] hover:text-[#4A7BA7] transition-colors">Infos pratiques</a>
+                    <a href="https://p.superdesign.dev/draft/fdbfab77-47a4-4f51-a3dc-520a3d76fb0e" id="nav-contact" class="px-6 py-2.5 bg-[#1A2332] text-white text-sm font-medium hover:bg-[#4A7BA7] transition-colors duration-300 rounded-sm">Contactez-nous</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-[#1A2332]">
+                    <iconify-icon icon="lucide:menu" width="24"></iconify-icon>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Dynamic Content -->
+        <main style="view-transition-name: main-content" class="flex-grow">
+            <!-- Page Header -->
+            <section class="bg-[#F8FAFC] py-16 border-b border-[#E2E8F0]">
+                <div class="max-w-4xl mx-auto px-6 text-center">
+                    <h1 class="text-3xl md:text-5xl font-bold text-[#1A2332] mb-6">Foire aux questions</h1>
+                    <p class="text-lg text-[#475569] max-w-2xl mx-auto leading-relaxed">
+                        Toutes les réponses pour comprendre le fonctionnement de l'école, nos formations et préparer votre projet de reconversion en toute sérénité.
+                    </p>
+                    
+                    <!-- Search Bar (Visual) -->
+                    <div class="max-w-xl mx-auto mt-10 relative">
+                        <div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-[#94A3B8]">
+                            <iconify-icon icon="lucide:search" width="20"></iconify-icon>
+                        </div>
+                        <input type="text" placeholder="Rechercher une question (ex: horaires, diplôme...)" 
+                               class="w-full pl-12 pr-4 py-4 bg-white border border-[#E2E8F0] rounded-sm text-[#1A2332] placeholder-[#94A3B8] focus:outline-none focus:border-[#4A7BA7] focus:ring-1 focus:ring-[#4A7BA7] transition-all shadow-sm">
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Content -->
+            <section class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="flex flex-col lg:flex-row gap-16">
+                        <!-- Sidebar Navigation -->
+                        <div class="w-full lg:w-64 flex-shrink-0">
+                            <div class="sticky top-28 space-y-8">
+                                <div>
+                                    <h3 class="text-xs font-bold text-[#94A3B8] uppercase tracking-widest mb-4">Catégories</h3>
+                                    <nav class="flex flex-col space-y-1">
+                                        <a href="#admissions" class="px-4 py-2 bg-[#F1F5F9] text-[#1A2332] font-medium rounded-sm border-l-2 border-[#4A7BA7]">Admissions</a>
+                                        <a href="#formations" class="px-4 py-2 text-[#64748B] hover:text-[#1A2332] hover:bg-[#F8FAFC] rounded-sm transition-colors border-l-2 border-transparent">Formations & Diplômes</a>
+                                        <a href="#organisation" class="px-4 py-2 text-[#64748B] hover:text-[#1A2332] hover:bg-[#F8FAFC] rounded-sm transition-colors border-l-2 border-transparent">Organisation des cours</a>
+                                        <a href="#financement" class="px-4 py-2 text-[#64748B] hover:text-[#1A2332] hover:bg-[#F8FAFC] rounded-sm transition-colors border-l-2 border-transparent">Tarifs & Financement</a>
+                                    </nav>
+                                </div>
+                                
+                                <div class="p-6 bg-[#F8FAFC] border border-[#E2E8F0] rounded-sm">
+                                    <h4 class="text-sm font-bold text-[#1A2332] mb-2">Une question spécifique ?</h4>
+                                    <p class="text-xs text-[#64748B] mb-4 leading-relaxed">Notre secrétariat est disponible pour vous répondre personnellement.</p>
+                                    <a href="https://p.superdesign.dev/draft/fdbfab77-47a4-4f51-a3dc-520a3d76fb0e" class="text-xs font-medium text-[#4A7BA7] hover:text-[#365D80] flex items-center gap-1">
+                                        Nous contacter <iconify-icon icon="lucide:arrow-right"></iconify-icon>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Accordions -->
+                        <div class="flex-1 space-y-16">
+                            
+                            <!-- Section: Admissions -->
+                            <div id="admissions" class="scroll-mt-28">
+                                <h2 class="text-2xl font-bold text-[#1A2332] mb-8 flex items-center gap-3">
+                                    <iconify-icon icon="lucide:clipboard-check" class="text-[#4A7BA7]"></iconify-icon>
+                                    Admissions & Prérequis
+                                </h2>
+                                <div class="space-y-4">
+                                    <details class="group bg-white border border-[#E2E8F0] rounded-sm open:border-[#4A7BA7] transition-colors duration-300">
+                                        <summary class="flex items-center justify-between p-6 cursor-pointer select-none">
+                                            <span class="text-[#1A2332] font-medium pr-4">Faut-il avoir un diplôme médical pour s'inscrire ?</span>
+                                            <iconify-icon icon="lucide:plus" class="icon-plus text-[#94A3B8] group-hover:text-[#4A7BA7] transition-all duration-300 flex-shrink-0 text-xl"></iconify-icon>
+                                        </summary>
+                                        <div class="px-6 pb-6 pt-0 text-[#475569] leading-relaxed border-t border-transparent group-open:border-[#E2E8F0]/50 group-open:pt-4">
+                                            Non, nos formations sont ouvertes à tous sans prérequis médical. Cependant, un niveau CESS (Baccalauréat) ou équivalent est recommandé pour suivre confortablement les cours d'anatomie et de physiologie qui font partie intégrante du cursus.
+                                        </div>
+                                    </details>
+
+                                    <details class="group bg-white border border-[#E2E8F0] rounded-sm open:border-[#4A7BA7] transition-colors duration-300">
+                                        <summary class="flex items-center justify-between p-6 cursor-pointer select-none">
+                                            <span class="text-[#1A2332] font-medium pr-4">Y a-t-il une limite d'âge pour suivre la formation ?</span>
+                                            <iconify-icon icon="lucide:plus" class="icon-plus text-[#94A3B8] group-hover:text-[#4A7BA7] transition-all duration-300 flex-shrink-0 text-xl"></iconify-icon>
+                                        </summary>
+                                        <div class="px-6 pb-6 pt-0 text-[#475569] leading-relaxed border-t border-transparent group-open:border-[#E2E8F0]/50 group-open:pt-4">
+                                            Aucune limite d'âge. La moyenne d'âge de nos étudiants se situe entre 30 et 50 ans. Nous accueillons chaque année de nombreuses personnes en reconversion professionnelle qui apportent la richesse de leur expérience de vie.
+                                        </div>
+                                    </details>
+
+                                    <details class="group bg-white border border-[#E2E8F0] rounded-sm open:border-[#4A7BA7] transition-colors duration-300">
+                                        <summary class="flex items-center justify-between p-6 cursor-pointer select-none">
+                                            <span class="text-[#1A2332] font-medium pr-4">Quand les inscriptions sont-elles ouvertes ?</span>
+                                            <iconify-icon icon="lucide:plus" class="icon-plus text-[#94A3B8] group-hover:text-[#4A7BA7] transition-all duration-300 flex-shrink-0 text-xl"></iconify-icon>
+                                        </summary>
+                                        <div class="px-6 pb-6 pt-0 text-[#475569] leading-relaxed border-t border-transparent group-open:border-[#E2E8F0]/50 group-open:pt-4">
+                                            Les inscriptions ouvrent généralement en mars pour la rentrée de septembre. Nous vous conseillons de ne pas tarder car nos classes sont limitées en nombre pour garantir la qualité de l'enseignement.
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Section: Formations -->
+                            <div id="formations" class="scroll-mt-28">
+                                <h2 class="text-2xl font-bold text-[#1A2332] mb-8 flex items-center gap-3">
+                                    <iconify-icon icon="lucide:graduation-cap" class="text-[#4A7BA7]"></iconify-icon>
+                                    Formations & Diplômes
+                                </h2>
+                                <div class="space-y-4">
+                                    <details class="group bg-white border border-[#E2E8F0] rounded-sm open:border-[#4A7BA7] transition-colors duration-300">
+                                        <summary class="flex items-center justify-between p-6 cursor-pointer select-none">
+                                            <span class="text-[#1A2332] font-medium pr-4">Le diplôme est-il reconnu par l'État ?</span>
+                                            <iconify-icon icon="lucide:plus" class="icon-plus text-[#94A3B8] group-hover:text-[#4A7BA7] transition-all duration-300 flex-shrink-0 text-xl"></iconify-icon>
+                                        </summary>
+                                        <div class="px-6 pb-6 pt-0 text-[#475569] leading-relaxed border-t border-transparent group-open:border-[#E2E8F0]/50 group-open:pt-4">
+                                            La profession de naturopathe n'est pas encore réglementée en Belgique comme le sont la médecine ou la kinésithérapie. Cependant, l'IHMN est reconnue par les principales unions professionnelles (UNB, UPMNS) qui garantissent le sérieux de la formation et permettent aux diplômés d'être assurés et reconnus par certaines mutuelles.
+                                        </div>
+                                    </details>
+
+                                    <details class="group bg-white border border-[#E2E8F0] rounded-sm open:border-[#4A7BA7] transition-colors duration-300">
+                                        <summary class="flex items-center justify-between p-6 cursor-pointer select-none">
+                                            <span class="text-[#1A2332] font-medium pr-4">Puis-je m'installer comme indépendant après la formation ?</span>
+                                            <iconify-icon icon="lucide:plus" class="icon-plus text-[#94A3B8] group-hover:text-[#4A7BA7] transition-all duration-300 flex-shrink-0 text-xl"></iconify-icon>
+                                        </summary>
+                                        <div class="px-6 pb-6 pt-0 text-[#475569] leading-relaxed border-t border-transparent group-open:border-[#E2E8F0]/50 group-open:pt-4">
+                                            Tout à fait. La majorité de nos étudiants s'installent comme praticiens de santé naturelle indépendants (naturopathes, conseillers en nutrition). Le cursus inclut d'ailleurs un module dédié à l'installation professionnelle et à la déontologie.
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Section: Organisation -->
+                            <div id="organisation" class="scroll-mt-28">
+                                <h2 class="text-2xl font-bold text-[#1A2332] mb-8 flex items-center gap-3">
+                                    <iconify-icon icon="lucide:calendar-clock" class="text-[#4A7BA7]"></iconify-icon>
+                                    Organisation des cours
+                                </h2>
+                                <div class="space-y-4">
+                                    <details class="group bg-white border border-[#E2E8F0] rounded-sm open:border-[#4A7BA7] transition-colors duration-300">
+                                        <summary class="flex items-center justify-between p-6 cursor-pointer select-none">
+                                            <span class="text-[#1A2332] font-medium pr-4">Est-il possible de combiner la formation avec un emploi ?</span>
+                                            <iconify-icon icon="lucide:plus" class="icon-plus text-[#94A3B8] group-hover:text-[#4A7BA7] transition-all duration-300 flex-shrink-0 text-xl"></iconify-icon>
+                                        </summary>
+                                        <div class="px-6 pb-6 pt-0 text-[#475569] leading-relaxed border-t border-transparent group-open:border-[#E2E8F0]/50 group-open:pt-4">
+                                            Oui, c'est le cas de 90% de nos étudiants. Nos cours sont organisés principalement les week-ends (un à deux par mois) et parfois en soirée, spécifiquement pour permettre aux personnes actives de suivre le cursus complet sans interrompre leur carrière.
+                                        </div>
+                                    </details>
+
+                                    <details class="group bg-white border border-[#E2E8F0] rounded-sm open:border-[#4A7BA7] transition-colors duration-300">
+                                        <summary class="flex items-center justify-between p-6 cursor-pointer select-none">
+                                            <span class="text-[#1A2332] font-medium pr-4">La présence aux cours est-elle obligatoire ?</span>
+                                            <iconify-icon icon="lucide:plus" class="icon-plus text-[#94A3B8] group-hover:text-[#4A7BA7] transition-all duration-300 flex-shrink-0 text-xl"></iconify-icon>
+                                        </summary>
+                                        <div class="px-6 pb-6 pt-0 text-[#475569] leading-relaxed border-t border-transparent group-open:border-[#E2E8F0]/50 group-open:pt-4">
+                                            Oui, nous privilégions l'enseignement présentiel car la transmission du geste et l'échange humain sont essentiels en thérapies naturelles. Une présence minimale de 80% est requise pour accéder aux examens.
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Section: Financement -->
+                            <div id="financement" class="scroll-mt-28">
+                                <h2 class="text-2xl font-bold text-[#1A2332] mb-8 flex items-center gap-3">
+                                    <iconify-icon icon="lucide:coins" class="text-[#4A7BA7]"></iconify-icon>
+                                    Tarifs & Financement
+                                </h2>
+                                <div class="space-y-4">
+                                    <details class="group bg-white border border-[#E2E8F0] rounded-sm open:border-[#4A7BA7] transition-colors duration-300">
+                                        <summary class="flex items-center justify-between p-6 cursor-pointer select-none">
+                                            <span class="text-[#1A2332] font-medium pr-4">Proposez-vous des facilités de paiement ?</span>
+                                            <iconify-icon icon="lucide:plus" class="icon-plus text-[#94A3B8] group-hover:text-[#4A7BA7] transition-all duration-300 flex-shrink-0 text-xl"></iconify-icon>
+                                        </summary>
+                                        <div class="px-6 pb-6 pt-0 text-[#475569] leading-relaxed border-t border-transparent group-open:border-[#E2E8F0]/50 group-open:pt-4">
+                                            Oui, le coût annuel de la formation peut être échelonné en mensualités sans frais supplémentaires. Nous souhaitons que l'aspect financier ne soit pas un frein à votre projet professionnel.
+                                        </div>
+                                    </details>
+
+                                    <details class="group bg-white border border-[#E2E8F0] rounded-sm open:border-[#4A7BA7] transition-colors duration-300">
+                                        <summary class="flex items-center justify-between p-6 cursor-pointer select-none">
+                                            <span class="text-[#1A2332] font-medium pr-4">Peut-on utiliser les chèques-formation ?</span>
+                                            <iconify-icon icon="lucide:plus" class="icon-plus text-[#94A3B8] group-hover:text-[#4A7BA7] transition-all duration-300 flex-shrink-0 text-xl"></iconify-icon>
+                                        </summary>
+                                        <div class="px-6 pb-6 pt-0 text-[#475569] leading-relaxed border-t border-transparent group-open:border-[#E2E8F0]/50 group-open:pt-4">
+                                            L'IHMN est agréée par la Région Wallonne pour les chèques-formation (pour les indépendants et PME). N'hésitez pas à contacter le secrétariat pour vérifier votre éligibilité.
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Still have questions CTA -->
+            <section class="py-24 bg-[#F8FAFC] border-t border-[#E2E8F0]">
+                <div class="max-w-3xl mx-auto px-6 text-center">
+                    <iconify-icon icon="lucide:message-circle-question" class="text-[#4A7BA7] text-5xl mb-6"></iconify-icon>
+                    <h2 class="text-3xl font-bold text-[#1A2332] mb-4">Vous n'avez pas trouvé votre réponse ?</h2>
+                    <p class="text-[#475569] mb-10 text-lg">
+                        Chaque parcours est unique. Notre équipe pédagogique est là pour étudier votre projet et répondre à vos interrogations spécifiques.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="https://p.superdesign.dev/draft/fdbfab77-47a4-4f51-a3dc-520a3d76fb0e" class="inline-flex items-center justify-center px-8 py-3.5 bg-[#1A2332] text-white font-medium hover:bg-[#4A7BA7] transition-colors duration-300 rounded-sm">
+                            Contacter l'école
+                        </a>
+                        <a href="https://p.superdesign.dev/draft/b83701fb-5761-476f-9701-e9a1c7fc91fa" class="inline-flex items-center justify-center px-8 py-3.5 bg-white border border-[#1A2332] text-[#1A2332] font-medium hover:bg-[#F1F5F9] transition-colors duration-300 rounded-sm">
+                            Infos pratiques
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer (Persistent) -->
+        <footer class="bg-[#0F172A] text-slate-400 pt-20 pb-10 border-t border-slate-800 mt-auto" style="view-transition-name: site-footer">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                    <!-- Brand -->
+                    <div class="space-y-6">
+                        <a href="https://p.superdesign.dev/draft/4f6f94bf-e829-4f84-83b6-3cbe792c1725" class="block">
+                            <span class="font-display font-bold text-2xl text-white tracking-tight">IHMN</span>
+                            <p class="text-[10px] uppercase tracking-widest text-[#4A7BA7] mt-1">Institut d’Hygiène et de Médecine Naturelle</p>
+                        </a>
+                        <p class="text-sm leading-relaxed max-w-xs">
+                            École de référence en Belgique pour la formation professionnelle en naturopathie et techniques de santé naturelle.
+                        </p>
+                    </div>
+
+                    <!-- Links -->
+                    <div>
+                        <h4 class="text-white font-medium mb-6 uppercase tracking-wider text-xs">L'École</h4>
+                        <ul class="space-y-4 text-sm">
+                            <li><a href="https://p.superdesign.dev/draft/f14962ec-3806-411f-a48a-957cc898721d" id="footer-about" class="hover:text-white transition-colors">Notre philosophie</a></li>
+                            <li><a href="https://p.superdesign.dev/draft/673599c3-1e55-4d73-8161-b4bcf8999c38" id="footer-team" class="hover:text-white transition-colors">L'équipe pédagogique</a></li>
+                            <li><a href="https://p.superdesign.dev/draft/dc07bc86-bc0c-49f1-b124-4e92bc8cf440" id="footer-formations" class="hover:text-white transition-colors">Toutes les formations</a></li>
+                            <li><a href="#" id="footer-accreditations" class="hover:text-white transition-colors">Accréditations</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact -->
+                    <div>
+                        <h4 class="text-white font-medium mb-6 uppercase tracking-wider text-xs">Contact</h4>
+                        <ul class="space-y-4 text-sm">
+                            <li class="flex items-start gap-3">
+                                <iconify-icon icon="lucide:map-pin" class="mt-1 text-[#4A7BA7]"></iconify-icon>
+                                <span>Chaussée de Namur 123<br>5000 Namur, Belgique</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <iconify-icon icon="lucide:phone" class="text-[#4A7BA7]"></iconify-icon>
+                                <span>+32 (0)81 22 33 44</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <iconify-icon icon="lucide:mail" class="text-[#4A7BA7]"></iconify-icon>
+                                <span>secretariat@ihmn.be</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Hours -->
+                    <div>
+                        <h4 class="text-white font-medium mb-6 uppercase tracking-wider text-xs">Horaires secrétariat</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex justify-between">
+                                <span>Lundi - Vendredi</span>
+                                <span>9h00 - 17h00</span>
+                            </li>
+                            <li class="flex justify-between text-[#4A7BA7]">
+                                <span>Samedi - Dimanche</span>
+                                <span>Fermé</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                    <p>&copy; 2024 IHMN. Tous droits réservés.</p>
+                    <div class="flex gap-6">
+                        <a href="#" id="footer-privacy" class="hover:text-white transition-colors">Mentions légales</a>
+                        <a href="#" id="footer-cookies" class="hover:text-white transition-colors">Politique de confidentialité</a>
+                        <a href="#" id="footer-sitemap" class="hover:text-white transition-colors">Plan du site</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
