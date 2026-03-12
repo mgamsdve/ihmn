@@ -159,6 +159,7 @@ https://ihmn.be/mentions-legales
 
 # 3. Architecture proposée pour la refonte
 
+
 Objectifs :
 
 - simplifier la navigation
@@ -184,18 +185,15 @@ Contenu principal :
 
 ## Formation Naturopathie
 
-Page principale dédiée à la formation.
+Page principale dédiée à aux formation.
 
-Structure :
-Formation
-├ Présentation
-├ Programme
-│ ├ Année 1
-│ ├ Année 2
-│ ├ Année 3
-│ └ Année 4
-├ Examens et certifications
-└ Débouchés
+Structure : Formation
+- Présentation
+- Programme
+- - Année 1
+- - Année 2
+- Examens et certifications
+- Débouchés
 
 
 Le programme conserve l'organisation actuelle par **années et modules**.
@@ -203,10 +201,12 @@ Le programme conserve l'organisation actuelle par **années et modules**.
 Chaque module pourra être affiché avec :
 
 - titre
-- description
+- description (Dont matière)
 - formateur
 - durée
 - objectifs pédagogiques
+
+Cette structure sera reprise pour les autres formations (hygiène de vie et nutrition)
 
 ---
 
@@ -280,3 +280,4 @@ Contenu :
 
 - formulaire de contact
 - coordonnées de l'institut
+  
