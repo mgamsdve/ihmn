@@ -200,3 +200,6 @@ Cette base sert de fil conducteur pour la suite de la refonte.
 ## Source de reference
 
 Site actuel analyse: https://ihmn.be
+
+## Autre document : 
+Docs des erreurs du site actuel : https://docs.google.com/document/d/1XI-_SjZgNvJTdke4OqBZ9DcyvGulNmndoXHAmBo2jm0/edit?usp=sharing 
